@@ -1,0 +1,8 @@
+# Paquetes principales
+inference==0.33.0 
+inference-cli==0.33.0
+supervision==0.25.1
+
+# Herramientas de desarrollo (opcional)
+black>=24.1.1               # Para formateo de código
+isort>=5.13.2               # Para ordenar imports
