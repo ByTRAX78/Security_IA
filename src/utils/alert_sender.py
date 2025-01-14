@@ -8,9 +8,9 @@ from .config import settings
 
 
 class AlertSender:
-    def __init__(self, base_url: str = "http://localhost:8000"):
-        self.base_url = base_url
-        self.protection_url = f"{base_url}/protection"
+    def __init__(self, base_url: str = None):
+        self.base_url = base_url or settings.API_URL
+        self.protection_url = f"{self.base_url}/protection"
 
     async def send_alert(self, class_id: int, confidence: float):
         """

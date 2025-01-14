@@ -8,6 +8,7 @@ websockets==12.0
 requests>=2.31.0
 aiohttp>=3.9.1
 pydantic-settings>=2.0.0
+python-dotenv>=1.0.0     
 
 # Herramientas de desarrollo (opcional)
 black>=24.1.1               # Para formateo de código

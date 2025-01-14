@@ -5,9 +5,18 @@ from pydantic_settings import BaseSettings
 
 
 class Settings(BaseSettings):
-    # API y servidor
-    API_URL: str = "http://localhost:8000"
-    WEBSOCKET_URL: str = "ws://localhost:8000/ws"
+    # Host y puerto
+    HOST: str = "localhost"  # Por defecto localhost
+    PORT: int = 8000
+
+    # URLs construidas dinámicamente
+    @property
+    def API_URL(self) -> str:
+        return f"http://{self.HOST}:{self.PORT}"
+
+    @property
+    def WEBSOCKET_URL(self) -> str:
+        return f"ws://{self.HOST}:{self.PORT}/ws"
 
     # Configuración de cámara
     CAMERA_ID: str = "CAM_001"
