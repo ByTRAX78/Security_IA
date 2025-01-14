@@ -11,13 +11,14 @@ class Settings(BaseSettings):
 
     # Configuración de cámara
     CAMERA_ID: str = "CAM_001"
-    CAMERA_SOURCE: int = 0  # 0 para webcam
+    # CAMERA_SOURCE: int = 0  # 0 para webcam
+    CAMERA_SOURCE: str = "video-samples/video2.mp4"
 
     # Ubicación por defecto (puede ser actualizada en tiempo real)
     DEFAULT_LOCATION: Dict[str, float] = {"lat": 0.0, "lon": 0.0}
 
     # Configuración del modelo
-    MODEL_ID: str = "weapons_v2_adrian/4"
+    MODEL_ID: str = "weapons_v2_adrian/9"
     CONFIDENCE_THRESHOLD: float = 0.5
 
     # Tiempos de cooldown para alertas (en segundos)
