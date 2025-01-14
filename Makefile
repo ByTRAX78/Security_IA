@@ -42,11 +42,13 @@ help: ## Show help
 	@echo -e 'Targets:\n'
 	@grep -E '^[a-zA-Z_-]+:.*?## .*$$' $(MAKEFILE_LIST) | sort | awk 'BEGIN {FS = ":.*?## "}; {printf "\033[36m%-30s\033[0m %s\n", $$1, $$2}'
 
-create-env-file: ## Create .env file with Roboflow API key if it doesn't exist
+create-env-file: ## Create .env file with configuration if it doesn't exist
 	@( \
 		if [ ! -f .env ]; then \
 			make print-header-section TEXT='Create .env file'; \
 			echo "export ROBOFLOW_API_KEY=XvZfPfAfQHKopwxiRSBe" > .env; \
+			echo "export CAMERA_ID=CAM_001" >> .env; \
+			echo "export API_URL=http://localhost:8000" >> .env; \
 			make print-done; \
 		else \
 			echo "$(C_YELLOW)>>> .env file already exists. Skipping creation.$(NO_COLOR)"; \

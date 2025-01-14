@@ -1,2 +1,47 @@
+# Entornos virtuales
 .env
 .venv
+env/
+venv/
+ENV/
+
+# Archivos compilados de Python
+__pycache__/
+*.py[cod]
+*$py.class
+*.so
+.pytest_cache/
+*.cpython-312.pyc
+
+# Archivos de IDE y editores
+.idea/
+.vscode/
+*.swp
+*.swo
+.DS_Store
+
+# Archivos de salida y media
+output.mp4
+video-samples/
+video2.mp4
+*.mp4
+
+# Archivos de construcción
+build/
+dist/
+*.egg-info/
+.eggs/
+
+# Archivos temporales
+src/**/*.cpython-312.pyc
+**/__pycache__
+*.pyc
+.coverage
+coverage.xml
+.python-version
+
+# Archivos locales de configuración
+setup.cfg
+dependency_links.txt
+PKG-INFO
+SOURCES.txt
